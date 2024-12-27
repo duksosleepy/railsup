@@ -1,0 +1,78 @@
+---
+RSpec:
+  Enabled: false
+
+RSpec/Focus:
+  Enabled: true
+
+RSpec/EmptyExampleGroup:
+  Enabled: true
+
+RSpec/EmptyLineAfterExampleGroup:
+  Enabled: true
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: true
+
+RSpec/EmptyLineAfterHook:
+  Enabled: true
+
+RSpec/EmptyLineAfterSubject:
+  Enabled: true
+
+RSpec/HookArgument:
+  Enabled: true
+
+RSpec/HooksBeforeExamples:
+  Enabled: true
+
+RSpec/ImplicitExpect:
+  Enabled: true
+
+RSpec/IteratedExpectation:
+  Enabled: true
+
+RSpec/LetBeforeExamples:
+  Enabled: true
+
+RSpec/MissingExampleGroupArgument:
+  Enabled: true
+
+RSpec/ReceiveCounts:
+  Enabled: true
+
+Capybara/CurrentPathExpectation:
+  Enabled: true
+
+FactoryBot/AttributeDefinedStatically:
+  Enabled: true
+
+FactoryBot/CreateList:
+  Enabled: true
+
+RSpec/ExampleLength:
+  CountAsOne: ["array", "heredoc", "method_call"]
+  Max: 20 # Override default of 5
+
+RSpec/MultipleExpectations:
+  Max: 10 # Overrides default of 1
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 20 # Overrides default of 5
+
+RSpec/NamedSubject:
+  EnforcedStyle: named_only
+
+RSpec/NestedGroups:
+  Max: 10 # Overrides default of 3
+
+RSpec/NotToNot:
+  EnforcedStyle: to_not
+
+RSpec/SpecFilePathFormat:
+  CustomTransform:
+    ActivityPub: activitypub
+    DeepL: deepl
+    FetchOEmbedService: fetch_oembed_service
+    OEmbedController: oembed_controller
+    OStatus: ostatus

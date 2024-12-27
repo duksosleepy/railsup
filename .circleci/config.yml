@@ -1,0 +1,57 @@
+# .circleci/config.yml
+
+#
+# Jobs have two parts: the execution environment and a set of steps.
+jobs:
+  setup:
+  # Install libraries like gems, packages and cache for next steps in parallel
+
+  test:
+  # Run test suite...
+
+  lint:
+    # resource_class: ...
+    # executor: ...
+    steps:
+      - prepare-workspace
+      - run:
+          name: Lint JS
+          command: yarn js:lint
+      - run:
+          name: Lint CSS
+          command: yarn css:lint
+      - run:
+          name: Lint Ruby
+          command: bundle exec rubocop
+      - run:
+          name: Lint Rails erb templates
+          command: bundle exec erblint --lint-all
+      - run:
+          name: Scan for Rails code vulnerabilities
+          command: |
+            gem install brakeman
+            brakeman
+      - run:
+          name: Scan for bundled Ruby gem vulnerabilities
+          command: |
+            gem install bundler-audit
+            bundle audit check --update
+      - run:
+          name: Scan for Ruby and RubyGems system vulnerabilities
+          command: |
+            bundle add ruby_audit --group "test"
+            bundle exec ruby-audit check
+
+#
+# Workflows are sequences of jobs. Both lint and test will run in parallel once
+# setup completes.
+workflows:
+  build:
+    jobs:
+      - setup:
+      - lint:
+          requires:
+            - setup
+      - test:
+          requires:
+            - setup

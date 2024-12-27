@@ -1,0 +1,7 @@
+parallel: true
+format: progress
+plugins:
+  - standard-rails
+extend_config:
+  - .rubocop/rspec.yml
+  - .rubocop/custom.yml
