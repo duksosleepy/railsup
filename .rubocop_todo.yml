@@ -34,8 +34,6 @@ Layout/SpaceInsideArrayLiteralBrackets:
 # Configuration parameters: EnforcedStyleForEmptyBraces.
 # SupportedStyles: space, no_space, compact
 # SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: 
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).

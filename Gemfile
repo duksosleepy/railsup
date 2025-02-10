@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 group :development, :test do
   gem "ruby-lsp"
+  gem "solargraph"
   gem "rubocop-packaging"
   gem "rubocop-performance"
   gem "rubocop-shopify"
