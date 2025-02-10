@@ -1,13 +1,24 @@
 source "https://rubygems.org"
 
 group :development, :test do
-  gem 'rubocop', require: false
+  gem "ruby-lsp"
+  gem "rubocop-packaging"
+  gem "rubocop-performance"
+  gem "rubocop-shopify"
+  gem "rubocop-thread_safety"
+  gem "standard-rails"
+  gem "tzinfo-data"
+
+  gem "rubocop", "~> 1.70.0"
+  gem "rubocop-capybara", require: false
+  gem "rubocop-factory_bot", require: false
+
   gem "standard", require: false
-  gem 'erb_lint', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'rubocop-rspec_rails', require: false
-  gem 'i18n-tasks', require: false
+  gem "erb_lint", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec_rails", require: false
+  gem "i18n-tasks", require: false
 
   gem "rails"
   gem "sassc-rails"

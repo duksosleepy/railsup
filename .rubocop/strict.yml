@@ -2,11 +2,14 @@ Lint/Debugger: # don't leave binding.pry
   Enabled: true
   Exclude: []
 
+<% gems = Bundler.locked_gems.dependencies.keys rescue [] %>
+
 <% if gems.include?("rubocop-rspec") %>
 RSpec/Focus: # run ALL tests on CI
   Enabled: true
   Exclude: []
 <% end %>
+
 <% if gems.include?("rubocop-rails") %>
 Rails/Output: # Don't leave puts-debugging
   Enabled: true

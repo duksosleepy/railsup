@@ -1,10 +1,4 @@
 ---
-RSpec:
-  Enabled: false
-
-RSpec/Focus:
-  Enabled: true
-
 RSpec/EmptyExampleGroup:
   Enabled: true
 
@@ -37,22 +31,6 @@ RSpec/LetBeforeExamples:
 
 RSpec/MissingExampleGroupArgument:
   Enabled: true
-
-RSpec/ReceiveCounts:
-  Enabled: true
-
-Capybara/CurrentPathExpectation:
-  Enabled: true
-
-FactoryBot/AttributeDefinedStatically:
-  Enabled: true
-
-FactoryBot/CreateList:
-  Enabled: true
-
-RSpec/ExampleLength:
-  CountAsOne: ["array", "heredoc", "method_call"]
-  Max: 20 # Override default of 5
 
 RSpec/MultipleExpectations:
   Max: 10 # Overrides default of 1
