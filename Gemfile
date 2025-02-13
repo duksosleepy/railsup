@@ -10,7 +10,7 @@ group :development, :test do
   gem "standard-rails"
   gem "tzinfo-data"
 
-  gem "rubocop", "~> 1.70.0"
+  gem "rubocop", "~> 1.71.2"
   gem "rubocop-capybara", require: false
   gem "rubocop-factory_bot", require: false
 
