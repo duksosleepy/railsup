@@ -3,10 +3,7 @@
     "@biomejs/biome": "1.8.3",
     "@eslint/js": "^9.7.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-oxlint": "0.5.0",
-    "eslint-plugin-react": "^7.34.4",
-    "eslint-plugin-react-hooks": "^4.6.2",
     "globals": "^15.8.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
@@ -15,17 +12,21 @@
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-config-standard": "^36.0.1",
-    "typescript-eslint": "^7.16.1"
+    "typescript-eslint": "^7.16.1",
+    "vite": "^6.1.0",
+    "vite-plugin-watch-and-run": "^1.7.3"
   },
   "browserslist": [
     "last 2 version",
     "not dead"
   ],
   "scripts": {
+    "build": "vite build --watch",
+    "build:css": "npx @tailwindcss/cli -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch",
     "lint": "npx oxlint && npx eslint",
     "lint:fix": "npm run lint",
     "biome": "npx biome format src test",
-    "biome:fix": "npm run biome -- --write",
+    "biome:fix": "npm run biome check -- --write",
     "stylelint": "stylelint \"src/**/*.{css}\"",
     "stylint:fix": "npm run stylelint -- --fix",
     "format": "npm run biome:fix && npm run lint:fix",
@@ -46,5 +47,13 @@
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": "npm run lint:fix && stylelint:check"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/vite": "^4.0.6",
+    "stimulus_reflex": "^3.5.3",
+    "tailwindcss": "^4.0.6",
+    "cable_ready": "5.0.6",
+    "@hotwired/stimulus": "^3.2"
   }
 }

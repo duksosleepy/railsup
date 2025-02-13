@@ -38,9 +38,9 @@ AllCops:
     # - 'db/**/*'
     # - 'node_modules/**/*'
     # - 'vendor/bundle/**/*'
-  SuggestExtensions: false
+  SuggestExtensions: true
   TargetRubyVersion: 3.3.3
-  TargetRailsVersion: 7.1
+  TargetRailsVersion: 8.0.1
 
 Rails:
   Enabled: true # enable rubocop-rails cops

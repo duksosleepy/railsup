@@ -31,6 +31,9 @@ group :development, :test do
   gem "puma"
   gem "bootsnap", require: false
 
+  gem "stimulus_reflex"
+  gem "redis-session-store"
+
   gem "sqlite3"
   gem "debug"
 end
