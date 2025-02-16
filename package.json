@@ -4,7 +4,7 @@
     "@eslint/js": "^9.7.0",
     "eslint": "^8.57.0",
     "eslint-plugin-oxlint": "0.5.0",
-    "globals": "^15.8.0",
+    "globals": "^15.15.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "oxlint": "0.6.1",
@@ -30,8 +30,8 @@
     "stylelint": "stylelint \"src/**/*.{css}\"",
     "stylint:fix": "npm run stylelint -- --fix",
     "format": "npm run biome:fix && npm run lint:fix",
-    "erb:fix": "bundle exec erblint -a --lint-all",
-    "erb:lint": "bundle exec erblint --lint-all",
+    "erb:fix": "bundle exec erb_lint -a --lint-all",
+    "erb:lint": "bundle exec erb_lint --lint-all",
     "ruby:fix": "bundle exec rubocop -a",
     "ruby:lint": "bundle exec rubocop",
     "i18n:fix": "i18n-tasks normalize",
@@ -49,11 +49,11 @@
     "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": "npm run lint:fix && stylelint:check"
   },
   "dependencies": {
+    "@hotwired/stimulus": "^3.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/vite": "^4.0.6",
-    "stimulus_reflex": "^3.5.3",
-    "tailwindcss": "^4.0.6",
     "cable_ready": "5.0.6",
-    "@hotwired/stimulus": "^3.2"
+    "stimulus_reflex": "^3.5.3",
+    "tailwindcss": "^4.0.6"
   }
 }

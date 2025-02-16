@@ -1,4 +1,4 @@
-# .erb-lint.yml
+# .erb_lint.yml
 ---
 EnableDefaultLinters: true
 linters:
@@ -9,5 +9,3 @@ linters:
       inherit_gem:
         standard: config/base.yml
 +     inherit_from: .erb-lint_rubocop.yml
-      AllCops:
-        DisabledByDefault: true

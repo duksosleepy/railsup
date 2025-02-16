@@ -1,12 +1,16 @@
-// eslint.config.mjs (ES Module)
+// eslint.config.mjs
 import js from "@eslint/js";
 import oxlint from "eslint-plugin-oxlint";
+import globals from "globals";
 
 export default [
 	{
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
+			globals: {
+				...globals.browser,
+			},
 		},
 		linterOptions: { reportUnusedDisableDirectives: true },
 	},
@@ -14,6 +18,14 @@ export default [
 	oxlint.configs["flat/recommended"],
 	{
 		plugins: { oxlint },
-		rules: {},
+		rules: {
+			"no-unused-vars": [
+				"error",
+				{
+					argsIgnorePattern: "^_",
+					// You can add other options here if necessary
+				},
+			],
+		},
 	},
 ];

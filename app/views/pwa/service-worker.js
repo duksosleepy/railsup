@@ -1,3 +1,4 @@
+/* eslint-env serviceworker */
 // Add a service worker for processing Web Push notifications:
 //
 // self.addEventListener("push", async (event) => {
@@ -24,3 +25,14 @@
 //     })
 //   )
 // })
+self.addEventListener("install", function (_event) {
+	console.log("Service Worker installing.");
+});
+
+self.addEventListener("activate", function (_event) {
+	console.log("Service Worker activated.");
+});
+
+self.addEventListener("fetch", function (_event) {
+	console.log("Fetching:", event.request.url);
+});
