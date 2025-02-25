@@ -23,7 +23,6 @@ export default [
 				"error",
 				{
 					argsIgnorePattern: "^_",
-					// You can add other options here if necessary
 				},
 			],
 		},

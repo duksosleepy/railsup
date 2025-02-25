@@ -44,8 +44,9 @@
   },
   "files": {
     "include": [
-      "src/**/*.ts",
-      "src/**/*.tsx",
+      "app/**/*.ts",
+      "app/**/*.js",
+      "app/**/*.tsx",
       "src/**/*.js",
       "src/**/*.jsx",
       "lib/**/*.ts",
