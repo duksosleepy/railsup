@@ -10,5 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_25_154854) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_25_161059) do
+# Could not dump table "memberships" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+
+# Could not dump table "organizations" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+
+  add_foreign_key "memberships", "organizations"
+  add_foreign_key "memberships", "users"
 end

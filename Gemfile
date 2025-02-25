@@ -37,6 +37,7 @@ group :development, :test do
   gem "sqlite3"
   gem "debug"
 
+  gem "bcrypt", "~> 3.1.12"
 end
 
 group :development do
