@@ -1,19 +1,20 @@
 {
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "^1.8.3",
     "@eslint/js": "^9.7.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-oxlint": "0.5.0",
+    "eslint-plugin-oxlint": "^0.5.0",
     "globals": "^15.15.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
-    "oxlint": "0.6.1",
+    "oxlint": "^0.6.1",
     "stylelint": "^16.7.0",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-config-standard": "^36.0.1",
     "typescript-eslint": "^7.16.1",
-    "vite": "^6.1.0",
+    "vite": "^6.2.0",
+    "vite-plugin-ruby": "^5.1.1",
     "vite-plugin-watch-and-run": "^1.7.3"
   },
   "browserslist": [
@@ -52,7 +53,7 @@
     "@hotwired/stimulus": "^3.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/vite": "^4.0.6",
-    "cable_ready": "5.0.6",
+    "cable_ready": "^5.0.6",
     "stimulus_reflex": "^3.5.3",
     "tailwindcss": "^4.0.6"
   }

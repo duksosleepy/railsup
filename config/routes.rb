@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "errors/show"
   get "dashboard/show"
   root to: "dashboard#show"
 
