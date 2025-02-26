@@ -28,4 +28,11 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      user: Person
+    attributes:
+      user:
+        name: Name
+        email: Email
+        password: Password
