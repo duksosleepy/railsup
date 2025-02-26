@@ -4,7 +4,7 @@ export default {
   "(app|config|lib|test)/**/*.rb":  "bundle exec rubocop -A",
   "**/*.html.erb": (files) =>
     `bundle exec erb_lint -a ${files.map((file) => `"${file}"`).join(" ")}`,
-  "config/locales/**/*.yml": () => "npm i18n:fix",
+  "config/locales/**/*.yml": () => "npm run i18n:fix",
   "./**/*.js": (files) =>
     `biome check --write ${files.map((file) => `"${file}"`).join(" ")}`,
   "./**/*.scss": (files) =>
