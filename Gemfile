@@ -31,6 +31,10 @@ group :development, :test do
   gem "puma"
   gem "bootsnap", require: false
 
+  gem "tailwindcss-ruby", "~> 4.0"
+  gem "tailwindcss-rails", "~> 4.1"
+  gem "vite_rails"
+
   gem "stimulus_reflex"
   gem "redis-session-store"
 
