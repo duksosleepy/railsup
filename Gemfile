@@ -14,7 +14,8 @@ group :development, :test do
   gem "rubocop-capybara", require: false
   gem "rubocop-factory_bot", require: false
 
-  gem 'brakeman', require: false
+  gem "brakeman", require: false
+  gem "danger", require: false
   gem "standard", "1.45.0", require: false
   gem "erb_lint", require: false
   gem "rubocop-rails", require: false

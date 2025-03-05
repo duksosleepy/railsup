@@ -47,6 +47,6 @@ node_modules
 
 /vendor/bundle
 /.ruby-lsp/*
-/.clj-kondo
-/.lsp
+/.clj-kondo/
+/.lsp/
 /ruby-lsp

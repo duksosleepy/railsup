@@ -41,7 +41,9 @@ jobs:
           command: |
             bundle add ruby_audit --group "test"
             bundle exec ruby-audit check
-
+      - run
+          command: |
+            bundle exec danger --verbose
 #
 # Workflows are sequences of jobs. Both lint and test will run in parallel once
 # setup completes.
