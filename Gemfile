@@ -1,8 +1,9 @@
+ruby "3.4.1"
+
 source "https://rubygems.org"
 
 group :development, :test do
-  gem "ruby-lsp"
-  gem "rubocop", "1.71.2"
+  gem "reek"
   gem "solargraph"
   gem "rubocop-packaging"
   gem "rubocop-performance"

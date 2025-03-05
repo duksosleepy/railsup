@@ -1,22 +1,27 @@
----
 include:
 - "**/*.rb"
+- "**/**/*.rb"
 exclude:
-- spec/**/*
-- test/**/*
+- "**/spec/**/*"
+- qa/qa/specs/features/**/*
 - vendor/**/*
 - ".bundle/**/*"
-require: []
+require:
+- actioncable
+- actionmailer
+- actionpack
+- actionview
+- activejob
+- activemodel
+- activerecord
+- activestorage
+- activesupport
 domains: []
 reporters:
-- rubocop
+- rubocop  # diagnostics
 - require_not_found
 formatter:
-  rubocop:
-    cops: safe
-    except: []
-    only: []
-    extra_args: []
+  rubocop: # formatting
 require_paths: []
 plugins: []
-max_files: 5000
+max_files: 20000

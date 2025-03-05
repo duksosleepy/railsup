@@ -30,6 +30,7 @@ inherit_gem:
 
 AllCops:
   NewCops: disable
+  TargetRubyVersion: 3.3.3
   Exclude:
     - node_modules/**/*
     - public/**/*
@@ -40,7 +41,6 @@ AllCops:
   DisplayStyleGuide: true
   ExtraDetails: true
   SuggestExtensions: false
-  TargetRubyVersion: 3.3.0
 
 Rails:
   Enabled: true # enable rubocop-rails cops

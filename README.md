@@ -7,9 +7,22 @@ Things you may want to cover:
 
 * Ruby version
 
+`~->3.3.0`
+
 * System dependencies
 
+```
+solargraph
+rubocop
+ruby-lsp
+
+```
+
 * Configuration
+
+1. `bundle config set --local path 'vendor/bundle'`
+
+2. `bundle install`
 
 * Database creation
 

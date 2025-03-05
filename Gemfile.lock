@@ -117,6 +117,35 @@ GEM
     diff-lcs (1.6.0)
     drb (2.2.1)
     dry-cli (1.2.0)
+    dry-configurable (1.3.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
+    dry-core (1.1.0)
+      concurrent-ruby (~> 1.0)
+      logger
+      zeitwerk (~> 2.6)
+    dry-inflector (1.2.0)
+    dry-initializer (3.2.0)
+    dry-logic (1.6.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
+    dry-schema (1.13.4)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-logic (>= 1.4, < 2)
+      dry-types (>= 1.7, < 2)
+      zeitwerk (~> 2.6)
+    dry-types (1.8.2)
+      bigdecimal (~> 3.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
+      zeitwerk (~> 2.6)
     erb_lint (0.9.0)
       activesupport
       better_html (>= 2.0.1)
@@ -181,6 +210,7 @@ GEM
       date
       net-protocol
     net-pop (0.1.2)
+      net-protocol
     net-protocol (0.2.2)
       timeout
     net-smtp (0.5.1)
@@ -199,7 +229,6 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.3.0)
     psych (5.2.3)
       date
       stringio
@@ -207,7 +236,7 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.10)
+    rack (3.1.11)
     rack-proxy (0.7.7)
       rack
     rack-session (2.1.0)
@@ -262,6 +291,12 @@ GEM
     redis-session-store (0.11.6)
       actionpack (>= 5.2.4.1, < 9)
       redis (>= 3, < 6)
+    reek (6.4.0)
+      dry-schema (~> 1.13.0)
+      logger (~> 1.6)
+      parser (~> 3.3.0)
+      rainbow (>= 2.0, < 4.0)
+      rexml (~> 3.1)
     regexp_parser (2.10.0)
     reline (0.6.0)
       io-console (~> 0.5)
@@ -303,11 +338,6 @@ GEM
       rubocop (~> 1.51)
     rubocop-thread_safety (0.6.0)
       rubocop (>= 1.48.1)
-    ruby-lsp (0.23.11)
-      language_server-protocol (~> 3.17.0)
-      prism (>= 1.2, < 2.0)
-      rbs (>= 3, < 4)
-      sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
     sassc (2.4.0)
@@ -343,7 +373,6 @@ GEM
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
       yard-solargraph (~> 0.1)
-    sorbet-runtime (0.5.11875)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -448,7 +477,7 @@ DEPENDENCIES
   puma
   rails
   redis-session-store
-  rubocop (= 1.71.2)
+  reek
   rubocop-capybara
   rubocop-factory_bot
   rubocop-packaging
@@ -458,7 +487,6 @@ DEPENDENCIES
   rubocop-rspec_rails
   rubocop-shopify
   rubocop-thread_safety
-  ruby-lsp
   sassc-rails
   selenium-webdriver
   solargraph
@@ -476,5 +504,8 @@ DEPENDENCIES
   web-console
   webdrivers
 
+RUBY VERSION
+   ruby 3.4.1p0
+
 BUNDLED WITH
-   2.6.3
+   2.6.5
