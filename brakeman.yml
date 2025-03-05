@@ -1,0 +1,8 @@
+---
+:skip_files:
+- vendor/bundle
+- .ruby-lsp/
+- node_modules/
+- tmp/
+- log/
+- db/migrate

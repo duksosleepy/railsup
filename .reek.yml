@@ -1,0 +1,29 @@
+---
+directories:
+  "app/controllers":
+    NestedIterators:
+      enabled: false
+    TooManyStatements:
+      max_statements: 10  # Controllers often need more statements
+  "app/helpers**":
+    UtilityFunction:
+      enabled: false
+  "app/models":
+    TooManyMethods:
+      max_methods: 15  # Models often need more methods
+  "lib/**/test/**":
+    UtilityFunction:
+      enabled: false
+  "spec/**":
+    UtilityFunction:
+      enabled: false
+    DuplicateMethodCall:
+      enabled: false  # Test code often has repeated setups
+
+exclude_paths:
+  - db/migrate
+  - .ruby-lsp/
+  - vendor/bundle
+  - node_modules/
+  - tmp/
+  - log/
