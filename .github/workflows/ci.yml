@@ -79,7 +79,8 @@ jobs:
         run: chmod +x bin/rails
 
       - name: Verify database configuration
-        run: test -f config/database.yml || echo "Warning: database.yml not found"
+        run: 'test -f config/database.yml || echo "Warning: database.yml not found"'
+
 
       - name: Run tests
         env:
