@@ -14,8 +14,8 @@ Things you may want to cover:
 ```
 solargraph
 rubocop
-ruby-lsp
-
+reek
+brakeman
 ```
 
 * Configuration

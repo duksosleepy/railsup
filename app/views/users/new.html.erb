@@ -16,8 +16,12 @@
           <%= form.email_field :email, class: "input", id: "user_email", name: "user[email]" %>
         </div>
         <div class="form-group">
+          <div class="field_with_errors">
           <%= form.label :password, t("activerecord.attributes.user.password"), class: "label" %>
+          </div>
+          <div class="field_with_errors">
           <%= form.password_field :password, class: "input", id: "user_password", name: "user[password]" %>
+          </div>
         </div>
         <%= form.submit t(".sign_up"), class: "btn-primary w-full" %>
       <% end %>
