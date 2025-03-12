@@ -16,7 +16,7 @@ group :development, :test do
 
   gem "brakeman", require: false
   gem "danger", require: false
-  gem "standard", "1.45.0", require: false
+  gem "standard", "1.47.0", require: false
   gem "erb_lint", require: false
   gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
